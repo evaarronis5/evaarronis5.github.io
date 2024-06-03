@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyLaute</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li> -->
+            </ul>
+          </div>
+          <div>
+            Trabajo de Final de Grado - Curso 2023/2024 - Universidad de Salamanca	
+          </div>
+        </div>
+    </nav>
+    <div class="card w-50 mt-3 mx-auto mb-3">
+        <div class="card-header">
+            <b>EasyLaute</b> - Lerne die Basics der deutschen Aussprache!
+        </div>
+        <div class="card-body">
+            <div id="fonemas">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="konsonanten-tab" data-bs-toggle="tab" data-bs-target="#konsonanten-tab-pane" type="button" role="tab" aria-controls="konsonanten-tab-pane" aria-selected="true">Konsonanten</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="vokale-tab" data-bs-toggle="tab" data-bs-target="#vokale-tab-pane" type="button" role="tab" aria-controls="vokale-tab-pane" aria-selected="false">Vokale</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="konsonanten-tab-pane" role="tabpanel" aria-labelledby="konsonanten-tab" tabindex="0">
+                        <h2>Konsonanten</h2>
+                        <p>Hier findest du eine Vereinfachung der grundlegenden deutschen Konsonantenlaute! Wie du sehen kannst, gibt es viele von ihnen nicht im Spanischen, deshalb ist es wichtig, sie zu üben! Wenn du auf den Laut klickst, zum Beispiel [b], wird ein Audio des Lautes abgespielt, und das funktioniert auch mit den Beispielen!			</p>
+                        <!-- Plosive -->
+                        <table class="table table-bordered border-primary">
+                            <tr class="table-primary">
+                                <th>Laut</th>
+                                <th>Buchstaben</th>
+                                <th>Beispiel</th>
+                                <th>Hinweise</th>
+                            </tr>
+                            <tr>
+                                <th colspan="4" class="text-center">Plosive</th>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/1B')">[b]</span></td>
+                                <td>Bb</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/plosive/Baum')"><b>B</b>aum</span></td>
+                                <td>Am Wortende wird als [p] ausgesprochen, z. B. a<b>b</b>hängen</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/2P')">[p]</span></td>
+                                <td>Pp</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/plosive/Paar')"><b>P</b>aar</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/3D')">[d]</span></td>
+                                <td>Dt</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/plosive/Dach')"><b>D</b>ach</span></td>
+                                <td>Am Wortende wird als [t] ausgesprochen, z. B. Ban<b>d</b></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/4T')">[t]</span></td>
+                                <td>Tt</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/plosive/Teil')"><b>T</b>eil</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/5G')">[g]</span></td>
+                                <td>Gg</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/plosive/Garten')"><b>G</b>arten</span></td>
+                                <td>Am Wortende wird als [k] ausgesprochen, z. B. Ta<b>g</b></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/6K')">[k]</span></td>
+                                <td>Kk</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/plosive/Katze')"><b>K</b>atze</span></td>
+                                <td></td>
+                            </tr>
+
+                            <!-- Frikative -->
+                            <tr>
+                                <th colspan="4" class="text-center">Frikative</th>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/7F')">[f]</span></td>
+                                <td>Ff - Vv</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/F1 - Fahr')"><b>F</b>ahr</span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/F2 - Vater')"><b>V</b>ater</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/8V')">[v]</span></td>
+                                <td>Ww</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/Wasser')"><b>W</b>asser</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/9S')">[s]</span></td>
+                                <td>Dt</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/S1 - Ostern')">O<b>s</b>tern</span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/S2 - Schloss')">Schlo<b>ss</b></span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/S3 - heissen')">hei<b>ß</b>en</span>
+                                </td>
+                                <td>Stimmlosses "ss" und "ß" zwischen Vokalen! "ss" und am Wortende! "s" ist stimmloss am Wortende und vor Konsonant (z. B. Ostern)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/10Z')">[z]</span></td>
+                                <td>Ss</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/Z1 - Sonne')"><b>S</b>onne</span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/Z2 - Nase')">Na<b>s</b>e</span>
+                                </td>
+                                <td>Stimmhaftes "s" zwischen Vokalen und am Wortanfang.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/11SH')">[ʃ]</span></td>
+                                <td>Ss - vor [p] und [t]</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/SH1 -Sport')"><b>S</b>port</span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/SH2 - Stadt')"><b>S</b>tadt</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>sch</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/SH3 -Schuhe')"><b>Sch</b>uhe</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/12GJ')">[ʒ]</span></td>
+                                <td>Jj</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/Journal g')"><b>J</b>ournal</span></td>
+                                <td>Fremde Wörter.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/13J')">[j]</span></td>
+                                <td>Jj</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/Jahr')"><b>J</b>ahr</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/14H')">[h]</span></td>
+                                <td>Hh</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/frikative/Haus')"><b>H</b>aus</span></td>
+                                <td></td>
+                            </tr>
+
+                            <!-- Nasale -->
+                            <tr>
+                                <th colspan="4" class="text-center">Nasale</th>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/15M')">[m]</span></td>
+                                <td>Mm</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/nasale/Maus')"><b>M</b>aus</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/16N')">[n]</span></td>
+                                <td>Nn</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/nasale/Nase')"><b>N</b>ase</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/17NG')">[ŋ]</span></td>
+                                <td>Nn</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/nasale/lang')">la<b>n</b>g</span>
+                                </td>
+                                <td>Vor [g]! Das G wird nicht ausgesprochen.</td>
+                            </tr>
+
+                            <!-- Liquide -->
+                            <tr>
+                                <th colspan="4" class="text-center">Liquide</th>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/18L')">[l]</span></td>
+                                <td>Ll</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/liquide/Lohn')"><b>L</b>ohn</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/19R')">[ʀ]</span></td>
+                                <td>Rr</td>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/ejemplos/liquide/Raum')"><b>R</b>aum</span></td>
+                                <td>Das R wird auf verschiedene Weise ausgeschprochen, [ʀ] ist der Standard</td>
+                            </tr>
+
+                            <!-- Allophone -->
+                            <tr>
+                                <th colspan="4" class="text-center">Allophone</th>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/20Ç')">[ç]</span></td>
+                                <td>ch</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/allophone/ç1 -sich')">si<b>ch</b></span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/allophone/ç2 - euch')">eu<b>ch</b></span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/allophone/ç3 - Molch')">Mol<b>ch</b></span>
+                                </td>
+                                <td>- Nach [i], [ɪ], [y], [ʏ], [ɛ], [ø], [œ] - Nach Diphtongen [aɪ], [ɔɪ] - Nach [n], [l], [ʀ]</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/21X')">[x]</span></td>
+                                <td>ch</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/allophone/X1- Buch')">Bu<b>ch</b></span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/allophone/X2 -auch')">au<b>ch</b></span>
+                                </td>
+                                <td>- Nach [u], [ʊ], [o], [ɔ], [a] -  Nach Diphtongen [aʊ]</td>
+                            </tr>
+
+                            <!-- Besondere Kombinationen -->
+                            <tr>
+                                <th colspan="4" class="text-center">Besondere Kombinationen</th>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/22PF')">[pf]</span></td>
+                                <td>pf</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/Pferd')"><b>Pf</b>erd</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/23TS')">[ts]</span></td>
+                                <td>ts - Cc - Zz</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/Ziel')"><b>Z</b>iel</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/24TSCH')">[tʃ]</span></td>
+                                <td>tsch</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/Tschüss')"><b>Tsch</b>üss</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/25DJ')">[dʒ]</span></td>
+                                <td>Jj</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/Jeans')"><b>J</b>eans</span>
+                                </td>
+                                <td>Fremde Wörter</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/26KV')">[kv]</span></td>
+                                <td>Qu</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/Quelle')"><b>Qu</b>elle</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>[ʔ]</td>
+                                <td>ohne Repräsentation</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/GS1 -Oase')">Oase</span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/GS2 -bearbeiten')">bearbeiten</span>
+                                </td>
+                                <td>Wortanfang mit Vokal - zwischen Wörter mit Anfangsvokal z. B. be*<b>ʔ</b>*arbeiten, O*<b>ʔ</b>*ase</td>
+                            </tr>
+                            <tr>
+                                <td><span class="cursor" onclick="playSound('audios/consonantes/fonemas/28KS')">[ks]</span></td>
+                                <td>Xs - chs</td>
+                                <td>
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/KS1 - Xenon')"><b>X</b>enon</span>,
+                                    <span class="cursor" onclick="playSound('audios/consonantes/ejemplos/besondere kombinationen/KS2 -Achse')">A<b>chs</b>e</span>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="text-center">Auf den ersten Blick ist es schwierig, die Unterschiede zwischen dem Deutschen und dem Spanischen zu erkennen. Zum Beispiel sind [t] und [d] im Spanischen interdental (die Zunge befindet sich zwischen den Zähnen), während sie im Deutschen dental sind (die Zunge stößt an die Zähne) und eine kleine Explosion verursachen.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="vokale-tab-pane" role="tabpanel" aria-labelledby="vokale-tab" tabindex="0">
+                        <h2>Vokale</h2>
+                        <p>Im Deutschen gibt es insgesamt 17 Vokale, im Spanischen dagegen nur 5. Es ist wichtig, sie unterscheiden zu können, denn die Kommunikation hängt davon ab! Reproduziert die Beispiele, um zwischen kurzen und langen Vokalen zu unterscheiden.</p>
+                        <table class="table table-bordered border-warning">
+                            <tr class="table-warning">
+                                <th>Laut</th>
+                                <th>Buchstaben</th>
+                                <th>Beispiel</th>
+                            </tr>
+                            <tr>
+                                <th colspan="4" class="text-center">gespannt - lang</th>
+                            </tr>
+                            <tr>
+                                <td>[a:]</td>
+                                <td>a</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Vater')">V<b>a</b>ter</span></td>
+                            </tr>
+                            <tr>
+                                <td>[e]</td>
+                                <td>e</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/lesen')">l<b>e</b>sen</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ɛ:]</td>
+                                <td>e, ä</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/bäte')">b<b>ä</b>te</span></td>
+                            </tr>
+                            <tr>
+                                <td>[i]</td>
+                                <td>i, ie</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Liebe')">L<b>ie</b>be</span></td>
+                            </tr>
+                            <tr>
+                                <td>[y]</td>
+                                <td>ü</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/übung')"><b>Ü</b>bung</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ø]</td>
+                                <td>ö</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/schön')">sch<b>ö</b>n</span></td>
+                            </tr>
+                            <tr>
+                                <td>[o]</td>
+                                <td>o</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Boot')">B<b>oo</b>t</span></td>
+                            </tr>
+                            <tr>
+                                <td>[u]</td>
+                                <td>u</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Schule')">Sch<b>u</b>le</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" class="text-center">ungespannt - kurz</th>
+                            </tr>
+                            <tr>
+                                <td>[a]</td>
+                                <td>a</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Mann')">M<b>a</b>nn</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ɛ]</td>
+                                <td>e, ä</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Bett')">B<b>e</b>tt</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ɪ]</td>
+                                <td>i</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Bitte')">b<b>i</b>tte</span></td>
+                            </tr>
+                            <tr>
+                                <td>[œ]</td>
+                                <td>ö</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Hölle')">H<b>ö</b>lle</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ɔ]</td>
+                                <td>o</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/offen')"><b>o</b>ffen</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ʊ]</td>
+                                <td>u</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/muss')">m<b>u</b>ss</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ʏ]</td>
+                                <td>ü</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Hütte')">H<b>ü</b>tte</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ə]</td>
+                                <td>e</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Lehre')">Lehr<b>e</b></span></td>
+                            </tr>
+                            <tr>
+                                <td>[ɐ]</td>
+                                <td>e + r</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/cortas/Lehrer')">Lehr<b>er</b></span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" class="text-center">Diphtonge</th>
+                            </tr>
+                            <tr>
+                                <td>[aɪ]</td>
+                                <td>ei</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/diptongos/Preis')">Pr<b>ei</b>s</span></td>
+                            </tr>
+                            <tr>
+                                <td>[aʊ]</td>
+                                <td>au</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/diptongos/Haus')">H<b>au</b>s</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ɔɪ]</td>
+                                <td>eu, äu</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/diptongos/Freund')">Fr<b>eu</b>nd</span></td>
+                            </tr>
+                            <tr>
+                                <td>[ʊɪ]</td>
+                                <td>ui</td>
+                                <td><span class="cursor" onclick="playSound('audios/vocales/vocales/diptongos/pfui')">pf<b>ui</b></span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="3" class="text-center">LANGE VOKALE - gefolgt von einem einzigen Konsonanten (z. B. Phase) - vor H (z. B. Fahrt) - Doppelvokal (Boot)</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" class="text-center">KURZE VOKALE - gefolgt von zwei oder mehreren Konsonanten (Tisch) - eigensilbige Wörter (mit)</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
