@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyLaute</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .cursor {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li> -->
             </ul>
           </div>
           <div>
@@ -329,7 +327,7 @@
                                 <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/bäte')">b<b>ä</b>te</span></td>
                             </tr>
                             <tr>
-                                <td>[i]</td>
+                                <td>[i:]</td>
                                 <td>i, ie</td>
                                 <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Liebe')">L<b>ie</b>be</span></td>
                             </tr>
@@ -339,17 +337,17 @@
                                 <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/übung')"><b>Ü</b>bung</span></td>
                             </tr>
                             <tr>
-                                <td>[ø]</td>
+                                <td>[ø:]</td>
                                 <td>ö</td>
                                 <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/schön')">sch<b>ö</b>n</span></td>
                             </tr>
                             <tr>
-                                <td>[o]</td>
+                                <td>[o:]</td>
                                 <td>o</td>
                                 <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Boot')">B<b>oo</b>t</span></td>
                             </tr>
                             <tr>
-                                <td>[u]</td>
+                                <td>[u:]</td>
                                 <td>u</td>
                                 <td><span class="cursor" onclick="playSound('audios/vocales/vocales/largas/Schule')">Sch<b>u</b>le</span></td>
                             </tr>
@@ -436,6 +434,11 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function playSound(fonema) {
+            let audio = new Audio(`${fonema}.mp3`);
+            audio.play();
+        }
+</script>
 </body>
 </html>
